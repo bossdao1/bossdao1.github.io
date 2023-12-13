@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT DAO</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+        }
+
+        .container {
+            max-width: 40%; 
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background: #171A28; 
+            border-radius: 30px;
+        }
+
+        .logo {
+            max-width: 40%; 
+            border-radius: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-links a {
+            display: flex;
+            color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px; 
+            cursor: pointer; 
+        }
+
+        .contact-links a i {
+            margin-right: 10px;
+        }
+
+        .subber {
+            width: 18px; 
+            height: 18px; 
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Pop-up box styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .popup-content {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Boss Dao</h1>
+
+        <img class="logo" src="logo.jpg" alt="DAO Logo">
+
+        <p>In the Morden world digital arts are more crazier than what you think. Spread your ideas with Boss DAO.</p>
+
+        <div class="contact-links">
+            <a onclick="openPopup()"><i class="fab fa-discord"></i>Discord </a>
+            <a href="https://twitter.com/boss_dao1" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="https://www.atlas3.io/project/boss-dao" target="_blank"><img src="atlas3.jpg" class="subber">Atlas3</a>
+            <a href="https://www.subber.xyz/boss-dao" target="_blank"><img src="subber.jpg" class="subber">Subber </a>
+        </div>
+    </div>
+
+    <!-- Popup box -->
+    <div class="popup" id="popup" onclick="closePopup()">
+        <div class="popup-content" onclick="event.stopPropagation();">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p>Our Discord is currently private.</p>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
