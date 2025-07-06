@@ -1,1 +1,1 @@
-ucsyctf{0s1nt_g0d_!!}
+ucsyctf{fake_flag!dont_submit_this}
